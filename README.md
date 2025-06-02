@@ -9,8 +9,8 @@ This project contains an automated end-to-end test suite for the Google Calculat
 The primary goal of this project is to build an automated end-to-end test suite that tests the functionality of this calculator component on Google. The calculator only has the buttons `0123456789.=+-×÷AC/CE`.
 
 ## Setup and Installation
-
-To run these tests, ensure you have Node.js installed.
+[![Node.js Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen?logo=node.js)](https://nodejs.org/)  
+To run these tests, ensure you have Node.js v18+ installed.
 
 1.  **Clone the repository:**
     ```bash
@@ -22,7 +22,7 @@ To run these tests, ensure you have Node.js installed.
     ```bash
     npm ci
     ```
-    This will install Cypress and cypress-xpath, which are listed as `devDependencies` in `package.json`.
+    This will install Cypress and `@cypress/xpath`, which are listed as `devDependencies` in `package.json`.
 
 **Important Note:** Due to Google's limitations, you might encounter a CAPTCHA. You will need to manually solve this CAPTCHA only once for the tests to proceed.
 
@@ -63,6 +63,14 @@ The test suite covers a variety of scenarios, including:
 
 ## Technologies Used
 
-* **Cypress.io**: End-to-end testing framework.
-* **cypress-xpath**: Plugin for Cypress to enable XPath selectors. 
-* The latest versions are used.
+[![Cypress Version](https://img.shields.io/npm/v/cypress?label=cypress&logo=cypress&color=4BC0A9&labelColor=black)](https://www.npmjs.com/package/cypress)
+[![@cypress/xpath version](https://img.shields.io/npm/v/@cypress/xpath/latest?label=%40cypress%2Fxpath)](https://www.npmjs.com/package/@cypress/xpath)
+
+* **Cypress.io**: End-to-end testing framework (v14.4.0)
+* **`@cypress/xpath`**: XPath selector plugin (v2.0.3)
+
+## Important Note on XPath Usage
+While this project uses `@cypress/xpath` for element selection, note that:
+* The plugin is no longer actively maintained
+* I recommend migrating to `data-cy` attributes for future-proofing
+* XPath is used here primarily for demonstration purposes
