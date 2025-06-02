@@ -20,7 +20,7 @@ To run these tests, ensure you have Node.js installed.
 
 2.  **Install dependencies:**
     ```bash
-    npm install
+    npm ci
     ```
     This will install Cypress and cypress-xpath, which are listed as `devDependencies` in `package.json`.
 
