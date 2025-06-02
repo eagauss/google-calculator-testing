@@ -1,4 +1,4 @@
-import 'cypress-xpath'
+import '@cypress/xpath'
 import CalculatorPage from '../support/page_objects/calculatorPage';
 
 Cypress.on('uncaught:exception', () => false)
