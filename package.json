@@ -1,0 +1,15 @@
+{
+  "name": "google-calculator-testing",
+  "version": "1.0.0",
+  "description": "Automated end-to-end test suite for the Google Calculator component.",
+  "author": "Emil Akhadov <https://www.linkedin.com/in/emil-akhadov/>",
+  "scripts": {
+    "test": "npx cypress run --headed --browser chrome",
+    "cy:run": "npx cypress run --headed --browser chrome",
+    "cy:open": "cypress open"
+  },
+  "devDependencies": {
+    "cypress": "*",
+    "cypress-xpath": "*"
+  }
+}
